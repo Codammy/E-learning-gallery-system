@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    max-width: inherit;
+}
+:root{
+    --main-color: #0f1115;
+    --primary-color: white;
+    --secondary-color: cyan;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+nav{
+    position: fixed;
+    z-index: 99;
+    background-color: transparent;
+    height: 10vh;
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    height: 100%;
+    margin: 15px;
+}
+nav ul li:hover{
+    color: white;
+}
+nav ul li{
+    margin: auto 15px;
+}
+nav ul li.active{
+    color: white;
+}
+.indicate{
+    width: 0;
+    background-color: cyan;
+    margin-bottom: 10px;
+}
+nav ul li:hover .indicate{
+    transition: 1s;
+    width: 100%;
+    height: 3px;
+    color: white;
+}
+.semi-circle{
+    position: fixed;
+    background: linear-gradient(rgba(15,17,21, 0.85), rgba(15,17,21, 0.85));
+    width: 70vw;
+    height: 120vh;
+    border-radius: 50%;
+    top: -5%;
+    left: -25%;
+}
+.logo{
+    margin-left: 83.5%;
+    position: absolute;
+    margin-top: 1.7%;
+    padding: 22px;
+    border-radius: 50%;
+    border: 7px solid white;
+    background-color: rgb(205, 177, 50);
+}
+.logo:hover{
+    border: 7px solid greenyellow;
+}
+.bell{
+    position: fixed;
+    background-color:var(--secondary-color);
+    padding: 50px;
+    top: -5%;
+    right: -2%;
+    border-radius: 50%;
+}
+.contain-form{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+form{
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 200px;
+    background-color: white;
+    padding: 100px;
+    border-radius: 10px;
+}
+form input{
+    margin: 7px;
+    padding: 10px;
+    width: 100%;
+}
+@media (max-width: 800px) {
+    img{
+        display: block;
+        margin: auto;
+        width: 100px;
+        height: 100px;
+    }
+    .logo{
+        margin: 0;
+    }
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery: Login</title>
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+<body>
+    <%- include('./components/nav.ejs') %>
+    <div class="semi-circle"></div>
+    <div class="logo"><img src="/images/favicon.png" alt="" width="100" height="100"></div>
+    <div class="bell"></div>
+    <div class="contain-form">
+        <form action="">
+            <div class="user">
+                <label for="username">Username</label>
+                <input type="text">
+            </div>
+            <div class="pass">
+                <label for="password">Password</label>
+                <input type="password">
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
