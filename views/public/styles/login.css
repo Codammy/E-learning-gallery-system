@@ -78,10 +78,31 @@ nav ul li:hover .indicate{
 .bell{
     position: fixed;
     background-color:var(--secondary-color);
-    padding: 50px;
+    padding: 40px;
     top: -5%;
     right: -2%;
     border-radius: 50%;
+}
+.message{
+    position: absolute;
+    width: 25vw;
+    height: fit-content;
+    background-color: var(--main-color);
+    color: white;
+    right: 0;
+    margin: 35px;
+    padding: 15px;
+    border-radius: 2px;
+    z-index: 999;
+}
+.announcement{
+    display: none;
+}
+.message h3{
+    margin-block: 7px;
+}
+.message p{
+    font-size: .9rem;
 }
 .contain-form{
     height: 100%;
@@ -97,6 +118,7 @@ form{
     background-color: white;
     padding: 100px;
     border-radius: 10px;
+    z-index: 99;
 }
 form input{
     margin: 7px;
