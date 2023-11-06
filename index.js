@@ -11,9 +11,12 @@ app.get('/', (req, res)=>{
 app.get('/login', (req, res)=>{
     res.render('login')
 })
+
 app.get('/student/dashboard', (req, res)=>{
     res.render('studentDashboard')
 })
-
+app.get('/logout', (req, res)=>{
+    res.redirect('/login')
+})
 app.use((req, res)=>{res.render('404', {req})})
 app.listen(8000, ()=>console.log("server started at port 8000"))
