@@ -1,85 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student: Dashboard</title>
-    <link rel="stylesheet" href="/styles/student.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/styles/student.css" />
+  </head>
+  <body>
     <article class="contain">
-        <div class="notification">
-            <div class="bell">
-                <i class="fa-solid fa-bell fa-xl" style="color: #0f1115; transform: rotate(30deg);"></i>
-            </div>
-                <div class="announcement message">
-                    <h3>Announcements</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis magnam, porro nostrum quibusdam hic delectus aliquid non ullam in voluptas dolores totam cum officiis, vero modi ipsum magni error facilis minima quisquam soluta molestias commodi libero dignissimos. Dolores impedit aperiam animi quam doloribus inventore fugiat!</p>
-                </div>
+      <div class="notification">
+        <div class="bell">
+          <i
+            class="fa-solid fa-bell fa-xl"
+            style="color: #0f1115; transform: rotate(30deg)"
+          ></i>
         </div>
-        <section class="user">
-            <div class="user-profile">
-                <div class="picture">
-                    <img src="/images/user3.png" alt="passport" width="200" height="200">
+        <div class="announcement message">
+          <h3>Announcements</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+            magnam, porro nostrum quibusdam hic delectus aliquid non ullam in
+            voluptas dolores totam cum officiis, vero modi ipsum magni error
+            facilis minima quisquam soluta molestias commodi libero dignissimos.
+            Dolores impedit aperiam animi quam doloribus inventore fugiat!
+          </p>
+        </div>
+      </div>
+      <section class="user">
+        <div class="user-profile">
+          <div class="picture">
+            <img
+              src="/images/user3.png"
+              alt="passport"
+              width="200"
+              height="200"
+            />
+          </div>
+          <div class="name">
+            <h2 class="common">Oguntola Damilola</h2>
+            <h3 class="common" style="font-family: monospace">
+              damisco005@gmail.com
+            </h3>
+            <h3 class="common" style="font-family: monospace">
+              COMPUTER SCIENCE(CS)
+            </h3>
+          </div>
+        </div>
+        <div class="recieved-messages">
+          <h3 class="title">Messages</h3>
+          <div class="contain-msg initial-state">
+            <div class="msg common"><span>Images</span></div>
+            <div class="msg common"><span>Document</span></div>
+            <div class="msg common"><span>Texts</span></div>
+          </div>
+        </div>
+        <div class="courses">
+          <h3 class="title">Courses</h3>
+          <div class="contain-courses initial-state">
+            <div class="offering common"><span>COM 214</span></div>
+            <div class="offering common"><span>COM 223</span></div>
+            <div class="offering common"><span>COM 301</span></div>
+          </div>
+        </div>
+        <div class="settings">
+          <span>Settings</span>
+          <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="setting-preview">
+          <a href="/logout">
+            <div>
+              <span style="color: red">Logout</span>
+              <span
+                ><i
+                  class="fa-solid fa-arrow-right-from-bracket"
+                  style="color: red"
+                ></i
+              ></span>
+            </div>
+          </a>
+          <div class="sendMessage">
+            <span>Complain</span>
+            <span><i class="fa-solid fa-message" style="color: blue"></i></span>
+          </div>
+        </div>
+      </section>
+      <main>
+        <header>
+          <h1>Welcome Oguntola,</h1>
+        </header>
+        <section class="content">
+          <div class="initial-message hide">
+            <h3>Welcome message...</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Blanditiis nam doloribus assumenda quo officiis, laboriosam soluta
+              placeat cumque aperiam qui dolor quisquam beatae odio modi dolores
+              ipsa optio. Deleniti fugit delectus tempore distinctio beatae modi
+              voluptatum saepe officiis, recusandae expedita excepturi cum culpa
+              quidem magni itaque nulla temporibus consequuntur consectetur sunt
+              ipsam! Rerum dolorum qui reprehenderit eum. Eveniet unde,
+              cupiditate accusamus soluta dicta quae delectus, at a tempora
+              ratione, eligendi non similique iusto. Atque iusto error alias
+              animi? Fuga, illo in tenetur quisquam beatae numquam quae
+              dignissimos aliquam. Facilis ratione nisi nam molestias! Dicta,
+              tenetur ducimus. Voluptas repellendus nisi consectetur, id
+              distinctio quisquam. Accusantium facilis sed doloremque deleniti,
+              sit inventore. Architecto odio aperiam, est repellendus nostrum
+              qui suscipit neque, ut eum, earum nesciunt reiciendis iste.
+            </p>
+          </div>
+          <div class="mother-messages">
+            <div class="messages image">
+              <div class="each">
+                <div class="time">
+                  <span><%= new Date() %></span>
                 </div>
-                <div class="name">
-                    <h2 class="common">Oguntola Damilola</h2>
-                    <h3 class="common" style="font-family: monospace;">damisco005@gmail.com</h3>
+                <span class="title"><h2>Terms and privacy updated</h2></span>
+                <img src="/images/first-image.png" alt="" />
+                <span class="desc"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Voluptate, eum. Deleniti reprehenderit quasi ullam ab.</span
+                >
+              </div>
+            </div>
+            <div class="messages documents">
+              <% for (let index = 0; index < 15; index++) { %>
+              <div class="file">
+                <div class="file-icon">
+                  <i class="fa-regular fa-file-lines fa-xl"></i>
                 </div>
-            </div>
-            <div class="recieved-messages">
-                <h3 class="title">Messages</h3>
-                <div class="contain-msg initial-state">
-                    <div class="msg common"><span>Images</span></div>
-                    <div class="msg common"><span>Document</span></div>
-                    <div class="msg common"><span>Texts</span></div>
+                <div class="file-name">
+                  <span>Random Name</span>
                 </div>
-            </div>
-            <div class="courses">
-                <h3 class="title">Courses</h3>
-                <div class="contain-courses initial-state">
-                    <div class="offering common"><span>COM 214</span></div>
-                    <div class="offering common"><span>COM 223</span></div>
-                    <div class="offering common"><span>COM 301</span></div>
+                <div class="date">
+                  <% const date = new Date() %> <% const hours = date.getHours()
+                  %> <% const mins = date.getMinutes() %> <% const currDate =
+                  date.getDate() %> <% const year = date.getFullYear() %>
+                  <small>
+                    <%= `${hours > 12 ? hours : '0'+hours} : ${mins > 12 ? mins
+                    : '0'+mins}` %> </small
+                  >-
+                  <small
+                    ><%= `${currDate > 12 ? currDate :'0'+currDate} :${year}`
+                    %></small
+                  ><br />
                 </div>
+              </div>
+              <% } %>
             </div>
-            <div class="settings"><span>Settings</span>
-                <i class="fa-solid fa-gear"></i>
+            <div class="messages text">
+              <% for( let index = 0; index < 5; index++ ) { %>
+
+              <div class="msg-body">
+                <div class="msg-time">
+                  <span><%= new Date() %></span>
+                  <h3>No Reply</h3>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  corrupti fugiat saepe aliquid debitis eveniet provident unde,
+                  maxime illo velit amet cupiditate aperiam corporis
+                  consequuntur distinctio nemo. Eaque consectetur modi quasi
+                  sit. Perspiciatis aliquid, dolorum distinctio mollitia aliquam
+                  veniam rem placeat exercitationem saepe asperiores eveniet nam
+                  iste. Laboriosam impedit beatae nostrum quasi repellendus enim
+                  quidem labore, eligendi rerum quis.
+                </p>
+              </div>
+              <% } %>
             </div>
-            <div class="setting-preview">
-                <a href="/logout">
-                    <div><span style="color: red;">Logout</span> <span><i class="fa-solid fa-arrow-right-from-bracket" style="color: red;"></i></span></div>
-                </a>
-                <div class="sendMessage"><span>Complain</span> <span><i class="fa-solid fa-message" style="color: blue;"></i></span></div>
+          </div>
+          <div class="mother-course">
+            <% for( let index = 0; index < 5; index++ ) { %>
+
+            <div class="course">
+              <h3 class="course-code">COM 125</h3>
+              <img src="/images/book.png" alt="" width="350" height="250" />
+              <span><a href="#">View course</a></span>
+              <div class="about-course">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Voluptatibus neque rem reprehenderit laudantium error qui
+                  quam, laborum, ullam delectus quod autem doloremque earum
+                  distinctio inventore?
+                </p>
+              </div>
             </div>
+            <% } %>
+          </div>
+          <div class="visit-main-site">
+            <p>
+              Visit main app to view course content. Thanks<br />&copy;
+              e-gallery
+            </p>
+          </div>
         </section>
-        <main>
-                <header>
-            <h1>
-                Welcome Oguntola, 
-                </h1>
-                </header>
-                <section class="content">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime qui natus dolores, ut enim officia nulla autem molestias incidunt dolor temporibus earum fugit perferendis labore dolorum aut provident recusandae facere. Cum amet ad suscipit, provident architecto veniam nulla facere perferendis quia molestiae, culpa reiciendis eos aliquam exercitationem. Sint, temporibus recusandae? Ut modi repellendus mollitia, alias magni sequi doloremque odio quod error! Libero debitis iste exercitationem culpa ab hic expedita quos non. Dignissimos, eos. Est officiis sequi, ratione aperiam laboriosam error libero adipisci ullam dignissimos eveniet dolores corrupti id dolore nesciunt laborum et explicabo voluptate alias quas cumque, quod nulla sed suscipit. Tempore repellendus officiis dolorem est rerum, aliquam, fugit optio sunt praesentium quisquam vero reprehenderit aperiam mollitia. Recusandae, nesciunt molestiae minus nihil magni porro ea, incidunt omnis architecto, at ut exercitationem voluptates placeat natus. Maiores ducimus rem iure, exercitationem, doloribus commodi fugiat cumque reprehenderit placeat id, repellat autem fuga dolor soluta temporibus tenetur mollitia amet veritatis ut molestiae aperiam consequatur. Sed architecto hic illum nihil corrupti! Vero officiis ex earum assumenda id vel quibusdam enim, pariatur animi odit deleniti quod placeat harum neque dolor soluta quis molestiae magnam sit quo! Veniam, unde? Ex tempora, non, cum praesentium laborum explicabo nemo impedit dolor minus itaque libero hic incidunt dolore molestiae unde debitis eveniet id repellendus eum tempore, aspernatur doloribus aperiam quam deleniti. Sint suscipit vel porro vero cum doloribus sed iusto ducimus mollitia error. Totam nihil odio laboriosam dignissimos reprehenderit. Reprehenderit adipisci odio iste fugit unde optio quasi perspiciatis veritatis, ab voluptatum molestias excepturi esse expedita nobis nihil itaque impedit fugiat atque quo aliquam, illo enim molestiae fuga. Placeat, amet explicabo inventore impedit necessitatibus omnis blanditiis ipsum ipsam ea. Iusto provident excepturi, ab nam eligendi pariatur maxime iste corporis doloribus ad id culpa, omnis corrupti sint, ipsa molestiae! Deleniti culpa natus voluptates est illum voluptatem sed voluptatibus modi, quidem ipsam accusamus ad doloremque aperiam ea tenetur ex soluta odit voluptatum sint, animi quod quibusdam? Accusamus, quisquam dolore similique pariatur, eum magni minus iusto nobis tempora veniam repellat fugit voluptates velit blanditiis excepturi rem beatae est obcaecati asperiores quod. Repellendus deserunt impedit dolores optio fugiat, nesciunt est. Totam necessitatibus nulla quo itaque dolores iste cumque. Laboriosam placeat fuga reiciendis corrupti, expedita enim distinctio? Voluptate dolor repellendus pariatur, blanditiis non iusto ducimus excepturi tempore quo sequi quisquam, ex similique. Nesciunt possimus harum laborum adipisci doloremque, inventore eius, dolorem nisi tempora cumque ut suscipit!</p>
-                </section>
-        </main>
-        <div class="contain-form hide">
-            <form action="" id="complain">
-                <div class="heading">
-                    <label for="title-"></label>
-                    <input type="text" name="title" id="title-" placeholder="Short description/title">
-                </div>
-                <div class="body">
-                    <label for="body-"></label>
-                <textarea name="body" id="body-" cols="30" rows="10" placeholder="Body of the message"></textarea>
-                </div>
-                <button type="submit">send</button>
-            </form>
-        </div>
+      </main>
+      <div class="contain-form hide">
+        <form action="" id="complain">
+          <div class="heading">
+            <label for="title-"></label>
+            <input
+              type="text"
+              name="title"
+              id="title-"
+              placeholder="Short description/title"
+            />
+          </div>
+          <div class="body">
+            <label for="body-"></label>
+            <textarea
+              name="body"
+              id="body-"
+              cols="30"
+              rows="10"
+              placeholder="Body of the message"
+            ></textarea>
+          </div>
+          <button type="submit">send</button>
+        </form>
+      </div>
     </article>
-    <script src="https://kit.fontawesome.com/3c5dd8b0d1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3c5dd8b0d1.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="/javascript/login.js"></script>
     <script src="/javascript/sDashboard.js"></script>
-</body>
+  </body>
 </html>

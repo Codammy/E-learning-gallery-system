@@ -161,17 +161,164 @@ main header h1{
     margin: 25px;
 }
 main .content{
-    background: var(--main-color);
     width: 93%;
-    height: 100vh;
-    margin: 25px;
+    height: fit-content;
+    margin: 40px;
     color: white;
     border-radius: 15px;
 }
+main .content .initial-message{
+    padding: 15px;
+    border-radius: 8px;
+    color: black;
+}
+main .content .initial-message:hover{
+    background-color: rgba(82, 83, 85, 0.638);
+}
 main .content p{
-    margin: 15px;
+margin: 15px;
 font-size: .89rem;
 line-height: 1.3rem;
+}
+main .mother-messages{
+    margin: 25px;
+    display: flex;
+}
+main .mother-messages img{
+    display: block;
+    max-width: 100%;
+    margin: 10px 55px;
+    border-radius: 10px;
+}
+main .mother-messages .image{
+    transition: .4s;
+    padding: 3px;
+    display: none;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+main .mother-messages .image span{
+    margin: 15px 35px;
+    display: block;
+    font-size: 1.2rem;
+}
+main .mother-messages .text{
+    transition: .4s;
+    display: none;
+}
+main .mother-messages .text .msg-body{
+    background-color: var(--main-color);
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+main .mother-messages .documents{
+    width:100%;
+    padding: 25px;
+    transition: .4s;
+    margin: auto;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    gap: 15px 10px;
+    justify-items: center;
+    color: var(--main-color);
+}
+main .mother-messages .documents .file{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+main .mother-messages .documents .file .date{
+    opacity: 0;
+    transition: .5s;
+    background-color: var(--main-color);
+    color: white;
+    bottom: -5%;
+    padding: 3px;
+    border-radius: 5px;
+}
+main .mother-messages .documents .file:hover .date{
+    opacity: 1;
+    transition: .5s;
+    bottom: 0%;
+}
+main .mother-messages .documents .file:hover{
+    padding: 15px;
+    background-color: rgba(82, 83, 85, 0.638);
+    cursor: pointer;
+}
+
+.msg-time{
+    color: brown;
+    margin:  9px 15px;
+    padding: 3px;
+}
+.msg-time span{
+    display: block;
+    margin-top: 5px;
+}
+main .content .mother-course{
+    width: 100%;
+    color: black;
+    display: none;
+    grid-template-columns: 5fr 5fr;
+    gap: 15px;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-content: center;
+}
+main .content .mother-course .course{
+    box-shadow: .1px .1px 3px #ccc;
+    border-radius: 10px;
+    position: relative;
+}
+main .content .mother-course .course .course-code{
+    margin: 15px;
+}
+main .content .mother-course .course:hover .about-course{
+   transition: 1s;
+   transition-property: bottom;
+   display: block;
+   background: rgba(11, 11, 11, 0.65);
+   position: absolute;
+   border-bottom-right-radius: inherit;
+   border-bottom-left-radius: inherit;
+   bottom: 0%;
+   height: fit-content;
+   color: white;
+}
+main .content .mother-course .course:hover{
+    box-shadow: .1px .1px 7px var(--main-color);
+    cursor: pointer;
+}
+main .content .mother-course span{
+    display: block;
+    opacity: 1;
+    margin: 15px;
+    color: green;
+    text-decoration: underline;
+}
+main .content .mother-course .course:hover .mother-course span{
+    display: none;
+}
+main .content .mother-course .about-course {
+    display: none;
+    bottom: -55%;
+   height: 0;
+}
+
+
+
+.visit-main-site {
+    color: black;
+    width: inherit;
+}
+.visit-main-site p{
+    text-align: center;
+    opacity: .5;
 }
 .hide{
     display: none;

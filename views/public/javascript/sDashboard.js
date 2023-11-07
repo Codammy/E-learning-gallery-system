@@ -28,3 +28,13 @@ showForm.addEventListener('click', (e)=>{
     showForm.classList.toggle('hide')
     e.stopPropagation()
 })
+
+const course = document.querySelector('.mother-course')
+const images = document.querySelector('.image')
+const documents = document.querySelector('.documents')
+const texts = document.querySelector('.text')
+
+const images_status = getComputedStyle(images)
+const documents_status = getComputedStyle(documents)
+const texts_status = getComputedStyle(texts)
+
