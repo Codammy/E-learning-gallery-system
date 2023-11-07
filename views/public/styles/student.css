@@ -139,6 +139,7 @@ body{
     bottom: 0;
     left: 31%;
     display: none;
+    z-index: 999;
 }
 .setting-preview-hide{
     display: block;
@@ -150,7 +151,8 @@ body{
      width: 100%;
 }
  .setting-preview div:hover{
-    background-color: #ccc;
+    background-color: #f8f8f8;
+    border-radius: inherit;
 }
 main{
     width: 70%;
@@ -218,7 +220,7 @@ main .mother-messages .documents{
     margin: auto;
     border: 4px solid #ccc;
     border-radius: 5px;
-    display: grid;
+    display: none;
     grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
     gap: 15px 10px;
     justify-items: center;
@@ -314,7 +316,7 @@ main .content .mother-course .about-course {
 
 .visit-main-site {
     color: black;
-    width: inherit;
+    width: 100%;
 }
 .visit-main-site p{
     text-align: center;
