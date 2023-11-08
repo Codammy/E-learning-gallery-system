@@ -63,10 +63,13 @@ nav h1{
 }
 table{
     margin: auto;
-    border: 3px solid var(--main-color);
-    table-layout: fixed;
     border-collapse: collapse;
     width: 50%;
+
+}
+tr:nth-child(odd)
+{
+    background-color: aliceblue;
 }
 td{
     padding: 10px;
@@ -103,7 +106,7 @@ button:hover{
     transition: .5s;
     color: var(--main-color);
 }
-.cover{
+.cover, .cover2{
     background-color: rgba(0, 0, 0, 0.67);
     position: fixed;
     width: 100%;
@@ -206,5 +209,43 @@ footer small{
     border: none;
     border-radius: 7px;
 }
-.img{
+.messages{
+    width: 31vw;
+    background-color: #fcfcfc;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 9999;
+    transition: .5s;
+    overflow-y: auto;
+    border-radius: 7px;
+}
+.messages .s{
+    font-size: small;
+    margin: 5px auto;
+    padding: 7px;
+    display: flex;
+}
+.messages .s:hover{
+    background-color: aliceblue;
+}
+.messages .s .user{
+    margin-left: auto;
+}
+.message-drag-in{
+    transition: .5s;
+    left: 0;
+}
+.messages::-webkit-scrollbar{
+    width: 1.5vh;
+}
+.messages::-webkit-scrollbar-track{
+    width: 1.2vh;
+    border-radius: 25px;
+    margin-block: 15px;
+}
+.messages::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    background-color: grey;
 }

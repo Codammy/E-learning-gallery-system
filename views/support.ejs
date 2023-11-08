@@ -31,6 +31,29 @@
                 <button id="view-student">Students</button>
             </div>
         </div>
+
+        <div class="">
+            <div class="messages">
+                <h2 style="font-family: monospace; margin: 15px;">Messages from student</h2>
+                <div class="canc">
+                    <i class="fa-solid fa-circle-xmark" style="color: red; position: absolute; right: 5%; top: 5%; "></i>
+                </div>
+                <% for( let index = 0; index < 19; index++ ) { %>
+                <div class="s">
+                    <div class="info">
+                    <div class="name"><p>Oguntola Damilola</p></div>
+                    <div class="email"><p>damisco005@gmail.com</p></div>
+                    <div class="title"><b>Longitudinal issues of lenght</b></div>
+                </div>
+                    <div class="user">
+            <img src="/images/user3.png" alt="" width="50" height="50">
+                    </div>
+                </div>
+                <% } %>
+            </div>
+        </div>
+
+        <!--STUDENTS ALGORITHM-->
         <div class="students">
             <table border="1">
                 <thead>
@@ -40,14 +63,7 @@
                     <th>DEPARTMENT</th>
                 </thead>
                 <tbody>
-                    <% for( let index = 1; index < 6; index++) { %>
-                        <tr>
-                            <td><%= index %></td>
-                            <td>Oguntola</td>
-                            <td>damisco005@gmail.com</td>
-                            <td>computer science</td>
-                        </tr>
-                    <% } %>
+
                 </tbody>
             </table>
         </div>
@@ -56,7 +72,9 @@
         <!--SEND ALGORITHM-->
         <div class="contain-to-send hide">
             <div class="to-send">
-                <i class="fa-solid fa-circle-xmark" style="color: red; position: absolute; right: 5%; top: 5%; "></i>
+                <div class="cancel">
+                    <i class="fa-solid fa-circle-xmark" style="color: red; position: absolute; right: 5%; top: 5%; "></i>
+                </div>
                 <form action="/post" method="post">
                 <div class="case">
                     <select name="format" id="format">

@@ -72,7 +72,7 @@ input{
 button{
     margin: 5px 15px;
     padding: 9px;
-    width: 5vw;
+    width: fit-content;
     outline: none;
     border: none;
     background-color: #0f1115;
