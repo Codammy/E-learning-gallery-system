@@ -9,7 +9,28 @@ nav{
     box-shadow: .5px .5px 7px #ccc;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    z-index: 99;
+    background-color: white;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    display: block;
+}
+:root{
+    --main-color: #0f1115;
+    --primary-color: white;
+    --secondary-color: cyan;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
+    height: 100vh;
+}
+
 nav h1{
     font-size: 2rem;
     margin: auto 15px;
@@ -21,4 +42,40 @@ nav h1{
     border-radius: 50%;
 }
 .user .fa-caret-down{
+}
+main{
+    width: 100%;
+    width: 100%;
+    display: block;
+
+}
+main form{
+    margin: 75px auto;
+    padding: 25px;
+    border: 3px double #ccc;
+    width: 30vw;
+    height: 53vh;
+    border-radius: 7px;
+}
+.username, .password{
+    margin: 35px 15px;
+    width: 100%;
+    height: fit-content;
+}
+input{
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    outline: none;
+    padding: 5px;
+}
+button{
+    margin: 5px 15px;
+    padding: 9px;
+    width: 5vw;
+    outline: none;
+    border: none;
+    background-color: #0f1115;
+    color: var(--primary-color);
+    border-radius: 5px;
 }

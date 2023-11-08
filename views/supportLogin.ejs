@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery: Admin</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+    <script src="https://kit.fontawesome.com/3c5dd8b0d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <h1 style="font-family: monospace;">@support</h1>
+    </nav>
+    <main>
+        <form action="/admin/auth" method="post">
+            <h2 style="font-family: monospace;">admin@support</h2>
+                <div class="username">
+                    <label for="unmae">Username:</label>
+                    <input type="text" id="uname" name="uname">
+                </div>
+                <div class="password">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="pass">
+                </div>
+                <button>Sign in</button>
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

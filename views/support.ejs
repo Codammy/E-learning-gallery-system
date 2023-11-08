@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery: Admin</title>
+    <link rel="stylesheet" href="/styles/support.css">
+    <script src="https://kit.fontawesome.com/3c5dd8b0d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <h1 style="font-family: monospace;">@support</h1>
+        <div class="user">
+            <img src="/images/user3.png" alt="" width="50" height="50">
+            <div class="icon">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="logout"><span style="color: red;"><a href="/admin/login">logout</a></span><span>Admin</span></div>
+        </div>
+    </nav>
+    <main>
+        <div class="action">
+            <div class="info">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora eligendi atque temporibus facere dignissimos hic consequatur dolorum minus laborum aut distinctio recusandae harum, voluptas, dolorem cumque fugiat dolore, reprehenderit illum esse impedit eum? Iure hic harum fuga minima! Iure mollitia molestiae nisi soluta assumenda.
+                </p>
+                <div class="btn">
+                    <button id="manage-message">Manage message</button>
+                    <button id="send-message">Send Message</button>
+                </div>
+                <button id="view-student">Students</button>
+            </div>
+        </div>
+        <div class="students">
+            <table border="1">
+                <thead>
+                    <th>S/N</th>
+                    <th>NAME</th>
+                    <th>EMAIL</th>
+                    <th>DEPARTMENT</th>
+                </thead>
+                <tbody>
+                    <% for( let index = 1; index < 6; index++) { %>
+                        <tr>
+                            <td><%= index %></td>
+                            <td>Oguntola</td>
+                            <td>damisco005@gmail.com</td>
+                            <td>computer science</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!--SEND ALGORITHM-->
+        <div class="contain-to-send hide">
+            <div class="to-send">
+                <i class="fa-solid fa-circle-xmark" style="color: red; position: absolute; right: 5%; top: 5%; "></i>
+                <form action="/post" method="post">
+                <div class="case">
+                    <select name="format" id="format">
+                        <option value="" selected disabled>Select format</option>
+                        <option value="image">Image</option>
+                        <option value="text">Text</option>
+                        <option value="document">File</option>
+                    </select>
+                </div>
+                <div class="sending">
+                    <input type="file" accept="application/pdf" class="hide">
+                    <div class="img hide">
+                        <input type="file" accept="image/*" placeholder="Title" maxlength="39"/>
+                        <input type="text" name="title" maxlength="25"/>
+                        <textarea name="body" id="" cols="30" rows="7" maxlength="75" placeholder="Description"></textarea>
+                    </div>
+                </div>
+                <div class="write hide">
+                    <!--<input type="text" placeholder="Title">-->
+                    <textarea name="message-body" id="" cols="30" rows="10" placeholder="Write a general message"></textarea>
+                </div>
+                <button disabled="disabled" id="upload">Upload</button>
+            </form>
+            </div>
+        </div>
+    </main>
+    <footer><small>&copy; CDM SOFTWARES</small></footer>
+    <script src="/javascript/support.js"></script>
+</body>
+</html>

@@ -14,16 +14,22 @@ app.get('/student/login', (req, res)=>{
 app.get('/student/dashboard', (req, res)=>{
     res.render('studentDashboard')
 })
-
-app.get('/admin/login', (req, res)=>{
-    res.render('adminDashboard')
-})
-app.get('/admin/dashboard', (req, res)=>{
-    res.render('studentDashboard')
-})
-
 app.get('/student/logout', (req, res)=>{
     res.redirect('/student/login')
 })
+app.post('/student/auth', (req, res)=>{
+    res.redirect('/student/dashboard')
+})
+
+app.get('/admin/login', (req, res)=>{
+    res.render('supportLogin')
+})
+app.get('/admin/dashboard', (req, res)=>{
+    res.render('support')
+})
+app.post('/admin/auth', (req, res)=>{
+    res.redirect('/admin/dashboard')
+})
+
 app.use((req, res)=>{res.render('404', {req})})
 app.listen(8000, ()=>console.log("server started at port 8000"))

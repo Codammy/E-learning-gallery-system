@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    box-shadow: .5px .5px 7px #ccc;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0%;
+    z-index: 99;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    display: block;
+}
+:root{
+    --main-color: #0f1115;
+    --primary-color: white;
+    --secondary-color: cyan;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
+    height: 100vh;
+}
+
+nav h1{
+    font-size: 2rem;
+    margin: auto 15px;
+}
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: 21px;
+}
+.user img{
+    border-radius: 50%;
+}
+.user .icon{
+    margin-inline: 11px;
+}
+.user:hover .logout{
+    display: flex;
+}
+.user .logout{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: none;
+}
+.user .logout span{
+    margin: 7px;
+    cursor: pointer;
+}
+.students{
+    width: 100%;
+}
+table{
+    margin: auto;
+    border: 3px solid var(--main-color);
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 50%;
+}
+td{
+    padding: 10px;
+    width: fit-content;
+}
+.action{
+    background-color: #45484c;
+    width: 35vw;
+    height: fit-content;
+    border-radius: 8.5px;
+    margin: 25px auto;
+}
+.action .info{
+    padding: 15px;
+    margin: 25px auto;
+    width: fit-content;
+    height: 85%;
+    text-align: center;
+    color: white;
+}
+button{
+    margin: 15px 15px;
+    padding: 9px;
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: #0f1115;
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: cyan;
+    transition: .5s;
+    color: var(--main-color);
+}
+.cover{
+    background-color: rgba(0, 0, 0, 0.67);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    z-index: 999;
+}
+.hide{
+    display: none;
+}
+.to-send{
+    background-color: white;
+    position: relative;
+    width: 45%;
+    height: 60%;
+    margin: 45px auto;
+    border-radius: 15px;
+}
+
+.case{
+    margin: 25px auto;
+    width: 100%;
+    padding: 15px;
+
+}
+.case select{
+    width: 95%;
+    padding: 15px;
+    border: 3px solid var(--main-color);
+    outline: none;
+    background-color: var(--primary-color);
+    font-size: large;
+    font-size: monospace;
+    border-radius: 5px;
+    margin-inline: auto;
+    margin-top: 25px;
+    display: block;
+}
+input{
+    margin: 0 25px;
+    width: 100%;
+}
+.img textarea{
+    margin: 0 25px;
+    width: 50%;
+    resize: none;
+}
+input[type='text']{
+    width: 50%;
+    margin-block: 7px;
+}
+.to-send button{
+    margin: 15px 35px;
+}
+footer{
+    width: 100%;
+}
+footer small{
+    width: fit-content;
+    display: block;
+    margin: 25px auto;
+    opacity: .7;
+}
+
+.write{
+    margin: auto;
+    background-color: white;
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+}
+.write input{
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-bottom: 3px solid var(--main-color);
+    font-family: monospace;
+    color: black;
+    outline: none;
+}
+.write textarea{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    resize: none;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-bottom: 5px solid #ccc;
+}
+.write button{
+    display: block;
+    margin: 15px auto;
+    width: 85px;
+    padding: 12px;
+    background-color: var(--main-color);
+    color: var(--primary-color);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+}
+.img{
+}
