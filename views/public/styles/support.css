@@ -237,6 +237,24 @@ footer small{
     transition: .5s;
     left: 0;
 }
+.current-msg{
+    margin-top: 40px;
+    left: -100%;
+    top: 0;
+    position: fixed;
+    height: 80%;
+    width: 60%;
+    background: white;
+    transition: .5s;
+    border-radius: 10px;
+}
+.current-msg h3, .current-msg .body{
+    margin: 25px;
+}
+.curr{
+    left: 35%;
+    transition: .5s;
+}
 .messages::-webkit-scrollbar{
     width: 1.5vh;
 }

@@ -66,9 +66,19 @@ manageMessage.addEventListener('click', (e)=>{
     cover2.classList.toggle('cover2')
 })
 
+const currentM = document.querySelectorAll(".s")
+const m = document.querySelector(".current-msg")
+currentM.forEach(element => {
+    element.addEventListener('click', (e)=>{
+        m.classList.toggle('curr')
+    })
+    element.removeEventListener('click', element)
+});
 const cancel2 = document.querySelector('.canc')
 cancel2.addEventListener('click', (e)=>{
     console.log("cancel2");
     message.classList.remove('message-drag-in')
     cover2.classList.remove('cover2')
+    m.classList.remove('curr')
+
 })
