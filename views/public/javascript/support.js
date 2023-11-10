@@ -49,7 +49,7 @@ const tbody = document.getElementsByTagName('tbody')[0]
 viewStudent.addEventListener('click', (e)=>{
     for( let index = 1; index < 6; index++) {
     tbody.innerHTML += `
-    <tr>
+    <tr id="student-details">
             <td>${index}</td>
             <td>Oguntola</td>
             <td>damisco005@gmail.com</td>
@@ -61,6 +61,7 @@ viewStudent.addEventListener('click', (e)=>{
         
 const message = document.querySelector(".messages")
 const cover2 = message.parentElement
+
 manageMessage.addEventListener('click', (e)=>{
     message.classList.toggle('message-drag-in')
     cover2.classList.toggle('cover2')
@@ -81,4 +82,8 @@ cancel2.addEventListener('click', (e)=>{
     cover2.classList.remove('cover2')
     m.classList.remove('curr')
 
+})
+
+tbody.addEventListener('click', (e)=>{
+    console.log(e);
 })
