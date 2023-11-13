@@ -46,15 +46,24 @@ select.addEventListener('change', (e) => {
 const table = document.querySelector(".students")
 const tbody = document.getElementsByTagName('tbody')[0]
 viewStudent.addEventListener('click', (e) => {
-    for (let index = 1; index < 6; index++) {
-        tbody.innerHTML += `
-    <tr id="student-details">
-            <td>${index}</td>
-            <td>Oguntola</td>
-            <td>damisco005@gmail.com</td>
-            <td>computer science</td>
-            </tr>
-            `}
+    try {
+        const status = fetch('/all-student')
+        console.log(status.body);
+        let count = 0;
+        for (const user of status.body) {
+            tbody.innerHTML += `
+        <tr id="student-details">
+                <td>${count}</td>
+                <td>${user.firstname} ${user.secondname}</td>
+                <td>${user.emial}</td>
+                <td>${user.department}</td>
+                </tr>
+                `
+                count++
+        }
+    } catch (error) {
+        console.log(error);
+    }
     viewStudent.setAttribute('disabled', 'disabled')
 })
 

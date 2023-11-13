@@ -42,6 +42,10 @@ app.get('/admin/login', (req, res)=>{
 app.get('/admin/dashboard', (req, res)=>{
     res.render('support')
 })
+app.get('/admin/all-student',async (req, res)=>{
+    const users = await Student.findAll()
+    res.json(users)
+})
 app.post('/admin/auth', (req, res)=>{
     res.redirect('/admin/dashboard')
 })
