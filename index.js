@@ -6,6 +6,7 @@ const app = express()
 
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname+'/views/public'))
+app.use(express.json())
 
 mongoose.connect(dbURI)
 .then(()=>{
@@ -43,6 +44,11 @@ app.get('/admin/dashboard', (req, res)=>{
 })
 app.post('/admin/auth', (req, res)=>{
     res.redirect('/admin/dashboard')
+})
+app.post('/admin/new-student', async (req, res)=>{
+   console.log(req.json)
+   const user = await Student.create(req.json)
+   res.json(user)
 })
 
 app.use((req, res)=>{res.render('404', {req})})

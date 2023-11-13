@@ -62,7 +62,7 @@ nav h1{
     width: 100%;
 }
 table{
-    margin: auto;
+    margin: 10px auto;
     border-collapse: collapse;
     width: 50%;
 
@@ -74,6 +74,72 @@ tr:nth-child(odd)
 td{
     padding: 10px;
     width: fit-content;
+}
+.add-new-student{
+    padding-top: 15px;
+    width: 100%;
+    height: fit-content;
+}
+.add-new-student form{
+    margin: auto;
+    padding: 10px;
+    width: fit-content;
+    color: white;
+    width: fit-content;
+    border-radius: 15px;
+    background-color: white;
+}
+.add-new-student .common{
+display: flex;
+justify-content: center;
+align-items: center;
+    width: fit-content;
+}
+.add-new-student input{
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+}
+.add-new-student .btn-add{
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background-color: purple;
+    margin: 5px;
+    text-align: center;
+    width: 100%;
+}
+.add-new-student .btn-add:hover{
+    cursor: pointer;
+    transition: .5s;
+    background-color: #0f1115;
+}
+.new-student{
+    position: fixed;
+    margin: auto;
+    width: fit-content;
+    color: white;
+    width: fit-content;
+    border-radius: 20px;
+    background-color: purple;
+    padding: 10px;
+    right: 5%;
+    bottom: 5%;
+}
+.new-student:focus{
+    border: 5px solid blue;
+}
+.new-student:hover .new-stud{
+    width: fit-content;
+    transition: .5s;
+    display: inline;
+}
+.new-student .new-stud{
+    transition: .5s;
+    display: none;
+    margin-inline: 5px;
 }
 .action{
     background-color: #45484c;
@@ -148,6 +214,8 @@ button:hover{
 input{
     margin: 0 25px;
     width: 100%;
+    width: 50%;
+    margin-block: 7px;
 }
 .img textarea{
     margin: 0 25px;
@@ -155,8 +223,7 @@ input{
     resize: none;
 }
 input[type='text']{
-    width: 50%;
-    margin-block: 7px;
+
 }
 .to-send button{
     margin: 15px 35px;

@@ -18,8 +18,37 @@
             <div class="logout"><span style="color: red;"><a href="/admin/login">logout</a></span><span>Admin</span></div>
         </div>
     </nav>
-    <main>
+    <main id="new-student">
         <div class="action">
+            <div class="add-new-student">
+                <form action="" method="post" id="add-new">
+                    <div class="first-name common">
+                        <label for="firstname"><i class="fa-regular fa-user fa-lg"></i></label>
+                        <input type="text" required id="firstname">
+                    </div>
+                    <div class="second-name common">
+                        <label for="secondname"><i class="fa-solid fa-user fa-lg"></i></label>
+                        <input type="text" required id="second-name">
+                    </div>
+                    <div class="email common">
+                        <label for="email"><i class="fa-solid fa-envelope fa-lg"></i></label>
+                        <input type="email" required id="email">
+                    </div>
+                    <div class="password common">
+                        <label for="password"><i class="fa-solid fa-key fa-lg"></i></label>
+                        <input type="password" required id="password" value="1234567">
+                    </div>
+                    <div class="matric common">
+                        <label for="Text"><i class="fa-solid fa-m fa-lg"></i></label>
+                        <input type="text" required id="password" value="" style="text-transform: uppercase;">
+                    </div>
+                    <div class="department common">
+                        <label for="department"><i class="fa-solid fa-institution fa-lg"></i></label>
+                        <input type="text" required id="department" style="text-transform: capitalize;">
+                    </div>
+                    <button class="btn-add">Add New</button>
+                </form>
+            </div>
             <div class="info">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit tempora eligendi atque temporibus facere dignissimos hic consequatur dolorum minus laborum aut distinctio recusandae harum, voluptas, dolorem cumque fugiat dolore, reprehenderit illum esse impedit eum? Iure hic harum fuga minima! Iure mollitia molestiae nisi soluta assumenda.
@@ -31,7 +60,14 @@
                 <button id="view-student">Students</button>
             </div>
         </div>
+        <div class="new-student">
+            <a href="#new-student">            <i class="fa-solid fa-circle-plus fa-xl" style="color: purple;"></i>
+            <span class="new-stud">
+                New student
+            </span>
+        </a>
 
+        </div>
         <div class="">
             <div class="messages">
                 <h2 style="font-family: monospace; margin: 15px;">Messages from student</h2>
@@ -96,7 +132,7 @@
                     <div class="img hide">
                         <input type="file" accept="image/*" placeholder="Title" maxlength="39"/>
                         <input type="text" name="title" maxlength="25"/>
-                        <textarea name="body" id="" cols="30" rows="7" maxlength="75" placeholder="Description"></textarea>
+                        <textarea id="bod" name="body" id="" cols="30" rows="7" maxlength="75" placeholder="Description"></textarea>
                     </div>
                 </div>
                 <div class="write hide">
