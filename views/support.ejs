@@ -24,27 +24,27 @@
                 <form action="" method="post" id="add-new">
                     <div class="first-name common">
                         <label for="firstname"><i class="fa-regular fa-user fa-lg"></i></label>
-                        <input type="text" required id="firstname">
+                        <input type="text" required id="firstname" placeholder="FirstName">
                     </div>
                     <div class="second-name common">
                         <label for="secondname"><i class="fa-solid fa-user fa-lg"></i></label>
-                        <input type="text" required id="second-name">
+                        <input type="text" required id="second-name" placeholder="LastName">
                     </div>
                     <div class="email common">
                         <label for="email"><i class="fa-solid fa-envelope fa-lg"></i></label>
-                        <input type="email" required id="email">
+                        <input type="email" required id="email" placeholder="Email">
                     </div>
                     <div class="password common">
                         <label for="password"><i class="fa-solid fa-key fa-lg"></i></label>
-                        <input type="password" required id="password" value="1234567">
+                        <input type="password" required id="password" value="1234567" placeholder="default - 1234567">
                     </div>
                     <div class="matric common">
                         <label for="Text"><i class="fa-solid fa-m fa-lg"></i></label>
-                        <input type="text" required id="password" value="" style="text-transform: uppercase;">
+                        <input type="text" required id="password" value="" style="text-transform: uppercase;" placeholder="matric-no">
                     </div>
                     <div class="department common">
                         <label for="department"><i class="fa-solid fa-institution fa-lg"></i></label>
-                        <input type="text" required id="department" style="text-transform: capitalize;">
+                        <input type="text" required id="department" style="text-transform: capitalize;" placeholder="Department">
                     </div>
                     <button class="btn-add">Add New</button>
                 </form>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="new-student">
-            <a href="#new-student">            <i class="fa-solid fa-circle-plus fa-xl" style="color: purple;"></i>
+            <a href="#new-student">       <i class="fa-solid fa-circle-plus fa-xl" style="color: purple;"></i>
             <span class="new-stud">
                 New student
             </span>
@@ -74,18 +74,22 @@
                 <div class="canc">
                     <i class="fa-solid fa-circle-xmark" style="color: red; position: absolute; right: 5%; top: 5%; "></i>
                 </div>
-                <% for( let index = 0; index < 19; index++ ) { %>
+                <% let title = null %>
+                <% let body = null %>
+                <% for (const each of cp) {
                 <div class="s">
+                    <% title = each.title %>
+                    <% body = each.body %>
                     <div class="info">
-                    <div class="name"><p>Oguntola Damilola</p></div>
-                    <div class="email"><p>damisco005@gmail.com</p></div>
-                    <div class="title"><b>Longitudinal issues of lenght</b></div>
+                    <div class="name"><p>{each.name}</p></div>
+                    <div class="email"><p>{each.email}</p></div>
+                    <div class="title"><b>{each.title}</b></div>
                 </div>
                     <div class="user">
             <img src="/images/user3.png" alt="" width="50" height="50">
                     </div>
                 </div>
-                <% } %>
+            } %>
             </div>
             
             <div class="current-msg ">
@@ -118,7 +122,7 @@
                 <div class="cancel">
                     <i class="fa-solid fa-circle-xmark" style="color: red; position: absolute; right: 5%; top: 5%; "></i>
                 </div>
-                <form action="/post" method="post">
+                <form action="/admin/post" method="post" enctype="multipart/form-data">
                 <div class="case">
                     <select name="format" id="format">
                         <option value="" selected disabled>Select format</option>
@@ -128,18 +132,18 @@
                     </select>
                 </div>
                 <div class="sending">
-                    <input type="file" accept="application/pdf" class="hide">
+                    <input type="file" accept="application/pdf" class="hide" id="file" name="file">
                     <div class="img hide">
-                        <input type="file" accept="image/*" placeholder="Title" maxlength="39"/>
-                        <input type="text" name="title" maxlength="25"/>
-                        <textarea id="bod" name="body" id="" cols="30" rows="7" maxlength="75" placeholder="Description"></textarea>
+                        <input type="file" accept="image/*" name="file"/>
+                        <input type="text" name="shortDesc"  placeholder="Title" maxlength="39" />
+                        <textarea id="bod" name="longDesc" id="" cols="30" rows="7" maxlength="75" placeholder="Description"></textarea>
                     </div>
                 </div>
                 <div class="write hide">
                     <!--<input type="text" placeholder="Title">-->
-                    <textarea name="message-body" id="" cols="30" rows="10" placeholder="Write a general message"></textarea>
+                    <textarea name="body" id="" cols="30" rows="10" placeholder="Write a general message"></textarea>
                 </div>
-                <button disabled="disabled" id="upload">Upload</button>
+                <button  id="upload" type="submit">Upload</button>
             </form>
             </div>
         </div>

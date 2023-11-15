@@ -7,7 +7,7 @@ const sending = document.querySelector('.sending')
 const cancel = document.querySelector('.cancel')
 const write = document.querySelector('.write')
 const select = document.getElementsByTagName('select')[0]
-const file = document.getElementsByTagName('input')[0]
+const file = document.getElementById('file')
 const image = document.querySelector('.img')
 
 const upload = document.getElementById('upload')
@@ -38,24 +38,25 @@ select.addEventListener('change', (e) => {
         write.classList.remove('hide')
         console.log("Text message");
     }
-    if (select.value !== '') {
-        upload.setAttribute('disabled', 'false')
-    }
+//    if (select.value !== '') {
+//        upload.setAttribute('disabled', 'false')
+//    }
 })
 
 const table = document.querySelector(".students")
 const tbody = document.getElementsByTagName('tbody')[0]
-viewStudent.addEventListener('click', (e) => {
+viewStudent.addEventListener('click', async (e) => {
     try {
-        const status = fetch('/all-student')
-        console.log(status.body);
-        let count = 0;
-        for (const user of status.body) {
+        const res = await fetch('/admin/all-student')
+        const data = await res.json()
+        console.log(data);
+        let count = 1;
+        for (const user of data) {
             tbody.innerHTML += `
         <tr id="student-details">
                 <td>${count}</td>
                 <td>${user.firstname} ${user.secondname}</td>
-                <td>${user.emial}</td>
+                <td>${user.email}</td>
                 <td>${user.department}</td>
                 </tr>
                 `
@@ -113,8 +114,11 @@ newStudent.addEventListener('submit', (e) => {
     for (const iterator of studentData) {
         iterator.value = ''
     }
-    fetch('/new-student', {
+    fetch('/admin/new-student', {
         method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
         body: JSON.stringify(dataLabel)
     }).then((res) => {
         alert('Student DB update successful')

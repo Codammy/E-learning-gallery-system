@@ -75,8 +75,3 @@ element[2].addEventListener('click', (e)=>{
     texts.style.display = 'block'
 })
 
-
-
-
-
-

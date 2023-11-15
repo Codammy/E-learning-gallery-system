@@ -23,11 +23,13 @@
         <form action="/student/auth" method="post">
             <div class="user">
                 <label for="username">Username</label>
-                <input type="text" id="username">
+                <input type="text" id="username" required>
+                <small class="error" id="email-error"></small>
             </div>
             <div class="pass">
                 <label for="password">Password</label>
-                <input type="password" id="password">
+                <input type="password" id="password" required>
+                <small class="error" id="password-error"></small>
             </div>
             <input type="submit">
         </form>

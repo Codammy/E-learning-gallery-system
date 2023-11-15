@@ -7,6 +7,7 @@ const messageFromAdminSchema = new  mongoose.Schema({
 const cpSchema = mongoose.Schema({
     title: String,
     body: String,
+    ref: mongoose.Schema.Types.ObjectId
 }, {timestamps: true})
 
 const fileSchema = mongoose.Schema({
@@ -15,7 +16,8 @@ const fileSchema = mongoose.Schema({
     encoding: String,
     mimetype: String,
     buffer: Buffer,
-}, {timestamps: true})
+    size: Number
+}, { timestamps: true })
 
 const imageSchema = mongoose.Schema({
     title: String,
@@ -25,16 +27,17 @@ const imageSchema = mongoose.Schema({
     encoding: String,
     mimetype: String,
     buffer: Buffer,
+    size: Number
 }, {timestamps: true})
 
 
 
-const complain = mongoose.model('student', cpSchema)
-const message = mongoose.model('student', messageFromAdminSchema)
-const file = mongoose.model('student', fileSchema)
-const image = mongoose.model('student', imageSchema)
+const complain = mongoose.model('complain', cpSchema)
+const message = mongoose.model('message', messageFromAdminSchema)
+const file = mongoose.model('document', fileSchema)
+const image = mongoose.model('image', imageSchema)
 
-export {
+module.exports = {
     complain,
     message, 
     file,
